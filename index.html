@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <div>
+          <p class="app__eyebrow">Organize seu dia</p>
+          <h1 class="app__title">Tarefas simples</h1>
+          <p class="app__subtitle">
+            Adicione, conclua e mantenha o foco com uma lista limpa e bonita.
+          </p>
+        </div>
+        <div class="app__stats" aria-live="polite">
+          <span class="app__count" id="taskCount">0 tarefas</span>
+          <span class="app__progress" id="taskProgress">0% concluído</span>
+        </div>
+      </header>
+
+      <section class="app__card">
+        <form class="task-form" id="taskForm">
+          <label class="task-form__label" for="taskInput">Nova tarefa</label>
+          <div class="task-form__controls">
+            <input
+              id="taskInput"
+              name="task"
+              type="text"
+              placeholder="Ex.: Responder e-mails, caminhar 20 min..."
+              autocomplete="off"
+              required
+            />
+            <button type="submit">Adicionar</button>
+          </div>
+        </form>
+
+        <div class="task-filter">
+          <button class="is-active" data-filter="all" type="button">Todas</button>
+          <button data-filter="active" type="button">Ativas</button>
+          <button data-filter="done" type="button">Concluídas</button>
+        </div>
+
+        <ul class="task-list" id="taskList">
+          <li class="task-list__empty">Nenhuma tarefa ainda. Hora de começar ✨</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
